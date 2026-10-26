@@ -3,174 +3,838 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101211">
-<meta name="description" content="Find your next spark. Explore beautiful photography and illustrations from the Pixabay community.">
-<title>Viewfinder — A world worth looking at</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23101211'/%3E%3Cpath d='M15 10h-5v5m15-5h5v5M10 25v5h5m10 0h5v-5' fill='none' stroke='%23d8e8be' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='5' fill='%23d8e8be'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0c0d0f">
+<meta name="description" content="Find your next spark. Explore free photography and illustrations from the Pixabay community.">
+<title>Viewfinder</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%230c0d0f'/%3E%3Cpath d='M15 10h-5v5m15-5h5v5M10 25v5h5m10 0h5v-5' fill='none' stroke='%23b8d99c' stroke-width='2.5'/%3E%3Ccircle cx='20' cy='20' r='5' fill='%23b8d99c'/%3E%3C/svg%3E">
 <style>
-:root{color-scheme:dark;--bg:#101211;--surface:#191c19;--line:#2b302b;--text:#f1f1e9;--muted:#9bA299;--faint:#727b70;--accent:#d8e8be;--serif:ui-serif,'Iowan Old Style','Palatino Linotype',Georgia,serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 var(--sans);-webkit-font-smoothing:antialiased}button,input,select{font:inherit;color:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a{color:inherit;text-decoration:none}button{border:0}button:disabled{cursor:wait;opacity:.5}:focus-visible{outline:2px solid var(--accent);outline-offset:5px}[hidden]{display:none!important}.wrap{max-width:1512px;margin:auto;padding:0 56px}.icon{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-header{border-bottom:1px solid var(--line)}.nav{height:92px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-size:21px;letter-spacing:-.9px;font-weight:600}.brand .icon{width:29px;height:29px;color:var(--accent)}.nav-right{display:flex;align-items:center;gap:34px}.tabs{display:flex;gap:28px;height:92px}.tab{position:relative;background:none;color:var(--muted);padding:0;font-size:13px;display:flex;gap:8px;align-items:center}.tab:hover,.tab.active{color:var(--text)}.tab.active:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--accent)}.count{font-size:10px;background:var(--line);border-radius:5px;padding:1px 5px}.source{border-left:1px solid var(--line);padding-left:30px;color:var(--muted);font-size:11px}.source strong{font-size:15px;color:var(--text);display:block;letter-spacing:-.4px}.source strong span{font-size:12px;margin-left:7px;color:var(--accent)}
-.hero{padding:62px 0 48px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px}.intro-label{display:flex;align-items:center;gap:9px;color:var(--accent);margin:0 0 18px}.intro-label:before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%}h1{font:400 clamp(42px,4.65vw,70px)/1.07 var(--serif);letter-spacing:-2.8px;margin:0;text-wrap:balance}h1 em{font-weight:400;color:var(--accent)}.hero-note{max-width:260px;color:var(--muted);font-size:13px;line-height:1.75;margin:0 0 4px}.hero-note .icon{display:block;margin-bottom:14px;color:var(--accent);width:26px;height:26px}
-.search-form{display:flex;align-items:center;gap:14px;border:1px solid #394035;background:var(--surface);border-radius:12px;padding:8px 8px 8px 20px}.search-form:focus-within{border-color:var(--accent)}.search-form>.icon{color:var(--muted);width:21px;height:21px}.search-form input{outline:0;border:0;background:transparent;width:100%;min-width:0;padding:12px 0;font-size:15px}.search-form input::placeholder{color:var(--faint)}.search-form kbd{font:11px var(--sans);border:1px solid var(--line);padding:2px 6px;border-radius:4px;color:var(--muted)}.search-button{flex-shrink:0;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:24px;border-radius:7px;background:var(--accent);color:#20271a;font-size:13px;font-weight:600;padding:14px 22px}.search-button:hover{background:#e6f3d4}.suggestions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:17px 0 36px}.suggestions>span{color:var(--faint);font-size:11px;margin-right:7px}.chip{background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:30px;font-size:11px;padding:6px 13px;transition:background .15s}.chip:hover{border-color:var(--faint);color:var(--text)}.chip.active{background:#d8e8be14;border-color:#81966a;color:var(--accent)}
-.gallery-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-bottom:20px;border-bottom:1px solid var(--line);margin-bottom:25px}.section-title{display:flex;align-items:baseline;gap:13px;min-width:0}h2{font:400 26px/1.2 var(--serif);letter-spacing:-.6px;margin:0;overflow-wrap:anywhere}.result-count{font-size:11px;color:var(--faint);white-space:nowrap}.filters{display:flex;gap:16px;align-items:center}.filter{display:flex;align-items:center;gap:8px}.filter .icon{width:15px;height:15px;color:var(--muted)}select{border:0;background-color:transparent;font-size:11px;max-width:150px;padding:6px 4px;cursor:pointer}select option{background:var(--surface)}.divider{height:16px;width:1px;background:var(--line)}
-.gallery{columns:4;column-gap:20px}.card{break-inside:avoid;margin:0 0 24px;position:relative}.image-wrap{position:relative;border-radius:9px;overflow:hidden;background:var(--surface)}.photo-open{display:block;width:100%;padding:0;background:transparent;text-align:left}.photo-open img{display:block;width:100%;height:auto;min-height:120px;object-fit:cover;transition:transform .4s,opacity .3s}.photo-open:hover img{transform:scale(1.035);opacity:.85}.photo-open:focus-visible{outline-offset:-4px}.photo-open:after{content:'';position:absolute;inset:45% 0 0;pointer-events:none;background:linear-gradient(transparent,#0007);opacity:0;transition:opacity .2s}.card:hover .photo-open:after{opacity:1}.save{position:absolute;right:11px;top:11px;display:grid;place-items:center;width:33px;height:33px;border:1px solid #ffffff30;border-radius:50%;background:#151a176b;backdrop-filter:blur(10px);color:white;opacity:0;transition:opacity .2s,background .2s}.card:hover .save,.save:focus-visible,.save.on{opacity:1}.save:hover{background:#30392c}.save.on{background:var(--accent);color:#29341e;border-color:var(--accent)}.save.on .icon{fill:currentColor;stroke-width:1}.save .icon{width:16px;height:16px}.card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;font-size:11px;color:var(--muted)}.credit{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.credit:hover{color:var(--accent)}.credit span{color:var(--faint);margin-right:4px}.likes{display:flex;gap:5px;align-items:center;font-size:10px;color:var(--faint)}.likes .icon{width:12px;height:12px}.skeleton{border-radius:9px;background:linear-gradient(100deg,var(--surface) 30%,#252a24 50%,var(--surface) 70%);background-size:300% 100%;animation:shimmer 1.8s ease-in-out infinite;height:240px;margin-bottom:20px;break-inside:avoid}.skeleton:nth-child(3n){height:320px}.skeleton:nth-child(3n + 1){height:190px}@keyframes shimmer{to{background-position:-150% 0}}.empty{text-align:center;padding:75px 20px 90px}.empty>.icon{width:35px;height:35px;color:var(--accent);margin-bottom:20px}.empty h3{font:400 30px var(--serif);margin:0 0 10px}.empty p{color:var(--muted);max-width:400px;margin:0 auto 24px}.button{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:11px 20px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:12px}.button:hover{border-color:var(--muted)}.button.primary{background:var(--accent);color:#20271a;border-color:var(--accent)}.more-row{text-align:center;padding:24px 0 60px}.more-row p{font-size:11px;color:var(--faint);margin:13px 0 0}.notice{color:var(--muted);font-size:12px;margin:0 0 20px}.notice button{color:var(--accent);background:none;text-decoration:underline}.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:12px 22px;border-radius:9px;box-shadow:0 8px 40px #0005;z-index:30;font-size:12px;max-width:90vw;text-align:center}
-footer{border-top:1px solid var(--line)}.footer-inner{padding-top:25px;padding-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:10px;color:var(--faint)}.footer-mark{display:flex;align-items:center;gap:8px;color:var(--muted)}.footer-mark .icon{width:16px;height:16px}.footer-links{display:flex;gap:22px}footer a:hover{color:var(--accent)}
-dialog{padding:0;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:14px;width:min(1100px,calc(100% - 40px));max-height:92dvh;box-shadow:0 24px 120px #0008}dialog::backdrop{background:#050805d9;backdrop-filter:blur(8px)}.dialog-top{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--line)}.dialog-user{display:flex;gap:10px;align-items:center;font-size:12px}.avatar{width:30px;height:30px;border-radius:50%;background:var(--accent);color:#303c24;display:grid;place-items:center;font-size:12px;font-weight:600}.close{display:grid;place-items:center;background:var(--surface);color:var(--muted);width:32px;height:32px;border-radius:50%}.detail-image{width:100%;height:54dvh;object-fit:contain;display:block;background:#080a09}.detail-bottom{padding:22px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px}.detail-bottom h3{font:400 26px var(--serif);margin:0 0 9px;text-transform:capitalize}.detail-meta{color:var(--muted);font-size:11px;margin:0}.detail-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.detail-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.detail-actions .icon{width:16px;height:16px}.detail-save.on{color:var(--accent)}.detail-note{padding:0 22px 20px;color:var(--faint);font-size:10px}.detail-note a{text-decoration:underline}
-@media(hover:none){.save{opacity:1}}@media(min-width:1600px){.hero{padding-top:80px;padding-bottom:60px}}@media(max-width:1100px){.wrap{padding-left:32px;padding-right:32px}.gallery{columns:3}.filters{gap:9px}.hero-note{max-width:200px}.filter>.icon{display:none}}@media(max-width:760px){.wrap{padding-left:22px;padding-right:22px}.nav,.tabs{height:76px}.nav-right{gap:18px}.tabs{gap:20px}.source{display:none}.hero{padding:40px 0 32px;display:block}.hero-note{max-width:none;margin-top:22px;font-size:12px}.hero-note .icon{display:none}h1{letter-spacing:-1.7px;font-size:46px}.intro-label{font-size:9px}.gallery{columns:2;column-gap:14px}.card{margin-bottom:20px}.gallery-head{display:block}.section-title{margin-bottom:15px}.filters{justify-content:space-between;gap:4px}select{max-width:115px}.gallery-head{margin-bottom:20px;padding-bottom:14px}.search-form kbd{display:none}.search-button{padding:13px 16px;gap:0}.search-button .icon{display:none}.search-form{padding-left:14px;gap:10px}.search-form input{font-size:13px}.suggestions{margin-bottom:30px;gap:6px}.suggestions>span{display:none}.chip{font-size:10px;padding:5px 11px}.result-count{font-size:10px}.card-foot{font-size:10px}.likes{font-size:9px}.detail-bottom{display:block;padding:18px}.detail-actions{margin-top:20px}.detail-image{height:43dvh}.footer-inner{align-items:flex-start;flex-direction:column;gap:12px}.save{width:29px;height:29px;right:8px;top:8px}dialog{width:calc(100% - 20px)}}@media(max-width:420px){.filter{flex:1;min-width:0}.filter select{width:100%;min-width:0;font-size:10px;padding-inline:0}.search-button span{font-size:0}.search-button span:after{content:'Search';font-size:13px}.brand{gap:7px;font-size:19px}.brand .icon{width:25px;height:25px}.tabs{gap:16px}.tab{font-size:12px}.tab>.icon{display:none}.hero-note br{display:none}}body:has(dialog[open]){overflow:hidden}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root {
+  color-scheme: dark;
+  --bg: #0c0d0f;
+  --surface: #141619;
+  --surface-hover: #191c20;
+  --line: #24272d;
+  --line-strong: #363b43;
+  --text: #ecebe6;
+  --muted: #9a9fa7;
+  --faint: #6f747c;
+  --accent: #b8d99c;
+  --danger: #f28b82;
+  --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
+body:has(dialog[open]) { overflow: hidden; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 32px; }
+.icon { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Masthead */
+.masthead { display: flex; align-items: center; gap: 14px; padding-block: 36px 20px; }
+.masthead > svg { width: 32px; height: 32px; color: var(--accent); flex: none; }
+h1 { font: 400 30px/1.1 var(--serif); letter-spacing: -.02em; margin: 0; }
+.masthead p { margin: 3px 0 0; color: var(--muted); font-size: 14px; }
+.masthead strong { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+.title-row { display: flex; flex-wrap: wrap; align-items: center; column-gap: 14px; row-gap: 2px; }
+.sync { display: flex; align-items: center; gap: 7px; margin: 4px 0 0 !important; font-size: 12px; color: var(--faint) !important; }
+.sync::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--faint); opacity: .7; }
+.sync[data-state="live"]::before { background: #7cc79a; opacity: 1; }
+.sync[data-state="error"]::before { background: var(--danger); opacity: 1; }
+.sync[data-state="checking"]::before { background: var(--muted); animation: pulse 1.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .2; } }
+
+/* Toolbar */
+.toolbar { border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); z-index: 10; }
+.toolbar .wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; padding-top: 14px; padding-bottom: 14px; }
+.controls { display: flex; gap: 10px; }
+.selects { display: flex; gap: 10px; }
+.search { flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px; margin: 0; padding: 0 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; color: var(--faint); }
+.search:focus-within { border-color: var(--line-strong); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.search input { flex: 1; min-width: 0; border: 0; background: none; outline: none; padding: 11px 0; font-size: 14px; color: var(--text); }
+.search input::placeholder { color: var(--faint); }
+.search kbd { font: 12px var(--sans); border: 1px solid var(--line-strong); border-radius: 5px; padding: 0 6px; }
+select, .button { background-color: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-size: 14px; }
+select { appearance: none; padding-right: 34px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='m3 4.5 3 3 3-3' fill='none' stroke='%239a9fa7' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 12px; }
+select:disabled { opacity: .45; cursor: not-allowed; }
+select:not(:disabled):hover, .button:hover { border-color: var(--line-strong); }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; text-decoration: none; }
+.button.primary { background: var(--text); border-color: var(--text); color: var(--bg); }
+.filter-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: -3px; padding: 3px; }
+.chip { border: 1px solid var(--line); background: none; border-radius: 999px; padding: 6px 13px; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.chip:hover { color: var(--text); border-color: var(--line-strong); }
+.chip.active { background: var(--text); border-color: var(--text); color: var(--bg); }
+.chip .n { margin-left: 6px; opacity: .6; font-variant-numeric: tabular-nums; }
+.chip-divider { flex: none; width: 1px; margin: 4px 4px; background: var(--line); }
+.saved-chip { display: inline-flex; align-items: center; gap: 6px; }
+.saved-chip .icon { width: 13px; height: 13px; }
+.meta { display: flex; align-items: center; gap: 14px; font-size: 13px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.link-button { border: 0; background: none; padding: 0; color: var(--accent); }
+
+/* Gallery: JS masonry, so appended pages never reshuffle what's already on screen */
+main { padding-bottom: 64px; }
+.gallery { display: flex; align-items: flex-start; gap: 18px; padding-top: 28px; }
+.col { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.card { position: relative; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; transition: transform .2s, border-color .2s, background-color .2s; }
+.card:hover { transform: translateY(-3px); border-color: var(--line-strong); background-color: var(--surface-hover); }
+.photo { position: relative; display: block; width: 100%; padding: 0; border: 0; background: var(--surface-hover); overflow: hidden; }
+.photo:focus-visible { outline-offset: -3px; }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+.card:hover .photo img { transform: scale(1.03); }
+.photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, #000a); opacity: 0; transition: opacity .2s; pointer-events: none; }
+.caption { position: absolute; left: 14px; right: 14px; bottom: 11px; z-index: 1; font-size: 12.5px; text-align: left; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; opacity: 0; transform: translateY(4px); transition: opacity .2s, transform .2s; }
+.card:hover .photo::after, .card:hover .caption, .photo:focus-visible::after, .photo:focus-visible .caption { opacity: 1; transform: none; }
+.photo.broken img, .photo.missing img { visibility: hidden; }
+.photo.broken::before, .photo.missing::before { content: "Preview unavailable"; position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; color: var(--faint); }
+.card-foot { display: flex; align-items: center; gap: 10px; padding: 10px 12px; font-size: 12.5px; color: var(--muted); }
+.credit { display: flex; align-items: center; gap: 8px; min-width: 0; margin-right: auto; text-decoration: none; }
+.credit:hover { color: var(--text); }
+.credit .name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.avatar { display: grid; place-items: center; width: 22px; height: 22px; flex: none; border-radius: 50%; font-size: 11px; font-weight: 600; color: hsl(var(--hue) 45% 85%); background: hsl(var(--hue) 25% 24%); }
+.likes { display: inline-flex; align-items: center; gap: 5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.likes .icon { width: 13px; height: 13px; }
+.save { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 7px; border: 0; background: none; padding: 6px; margin: -6px -4px -6px 0; border-radius: 8px; color: var(--faint); }
+.save:hover { color: var(--text); }
+.save.on { color: var(--accent); }
+.save.on .icon { fill: color-mix(in srgb, var(--accent) 30%, transparent); }
+.skeleton { border-radius: 14px; background: linear-gradient(100deg, var(--surface) 30%, var(--surface-hover) 50%, var(--surface) 70%); background-size: 300% 100%; animation: shimmer 1.6s ease-in-out infinite; }
+@keyframes shimmer { to { background-position: -150% 0; } }
+.empty { text-align: center; padding: 80px 20px; color: var(--muted); }
+.empty h2 { font: 400 24px var(--serif); color: var(--text); margin: 0 0 6px; }
+.empty p { max-width: 420px; margin: 0 auto 20px; }
+.more { min-height: 1px; padding: 36px 0 0; text-align: center; font-size: 13px; color: var(--faint); }
+.more .link-button { margin-left: 6px; }
+.more.loading::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; vertical-align: middle; border-radius: 50%; background: var(--muted); animation: pulse 1.2s ease-in-out infinite; }
+
+/* Detail dialog */
+dialog { width: min(1120px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--line-strong); border-radius: 18px; background: var(--surface); color: var(--text); box-shadow: 0 30px 80px #0009; overflow: hidden; }
+dialog::backdrop { background: #000c; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.detail-body { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(300px, 1fr); max-height: calc(100dvh - 34px); }
+.detail-media { display: grid; place-items: center; min-height: 320px; background: #060708; }
+.detail-media img { display: block; max-width: 100%; max-height: calc(100dvh - 34px); width: auto; height: auto; }
+.detail-info { padding: 44px 32px 28px; overflow-y: auto; }
+.tag { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); border-radius: 999px; padding: 3px 9px; }
+dialog h2 { font: 400 32px/1.15 var(--serif); letter-spacing: -.01em; margin: 12px 0 14px; text-transform: capitalize; text-wrap: balance; }
+.detail-info .credit { margin: 0 0 22px; color: var(--muted); font-size: 14px; }
+.detail-info .avatar { width: 28px; height: 28px; font-size: 12px; }
+.facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 12px; margin: 0 0 22px; padding: 16px 0; border-block: 1px solid var(--line); }
+.facts dt { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+.facts dd { margin: 3px 0 0; font-size: 14px; font-variant-numeric: tabular-nums; }
+.detail-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.actions .save { margin: 0; padding: 10px 14px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; }
+.note { font-size: 12px; color: var(--faint); margin: 20px 0 0; }
+.close { position: absolute; top: 12px; right: 12px; z-index: 2; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: color-mix(in srgb, var(--surface) 85%, transparent); color: var(--muted); }
+.close:hover { color: var(--text); border-color: var(--line-strong); }
+#settings { width: min(460px, calc(100% - 32px)); }
+.settings-body { position: relative; padding: 36px 28px 28px; }
+.settings-body h2 { margin-top: 0; font-size: 28px; }
+.settings-body p { color: var(--muted); font-size: 14px; margin: 0 0 20px; }
+.settings-body input { width: 100%; margin: 6px 0 18px; padding: 11px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; }
+.settings-body label { font-size: 13px; color: var(--muted); }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 20px; padding-block: 22px 26px; font-size: 12.5px; color: var(--faint); }
+footer nav { display: flex; gap: 20px; }
+footer a, footer button { color: inherit; text-decoration: none; border: 0; background: none; padding: 0; font-size: inherit; }
+footer a:hover, footer button:hover { color: var(--accent); }
+
+.to-top { --progress: 0; position: fixed; right: 24px; bottom: 24px; z-index: 15; display: grid; place-items: center; width: 52px; height: 52px; padding: 0; border: 0; border-radius: 50%; color: var(--text); background: color-mix(in srgb, var(--surface) 85%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 10px 30px #000a; opacity: 0; visibility: hidden; transform: translateY(12px) scale(.9); transition: opacity .25s, transform .25s, visibility .25s; }
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top > * { grid-area: 1 / 1; }
+.to-top .ring { width: 52px; height: 52px; transform: rotate(-90deg); fill: none; stroke-width: 2.5; }
+.to-top .track { stroke: var(--line-strong); }
+.to-top .fill { stroke: var(--accent); stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: calc(100 - var(--progress) * 100); transition: stroke-dashoffset .15s linear; }
+.to-top .icon { width: 18px; height: 18px; transition: transform .2s; }
+.to-top:hover .icon { transform: translateY(-3px); }
+.toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 20; max-width: calc(100% - 32px); width: max-content; background: var(--text); color: var(--bg); font-size: 13px; padding: 10px 18px; border-radius: 10px; }
+
+@media (hover: none) {
+  .caption, .photo::after { display: none; }
+}
+@media (min-width: 721px) {
+  .toolbar { position: sticky; top: 0; }
+}
+@media (max-width: 900px) {
+  .detail-body { grid-template-columns: minmax(0, 1fr); overflow-y: auto; }
+  .detail-media { min-height: 0; }
+  .detail-media img { max-height: 52dvh; }
+  .detail-info { padding: 24px 22px 24px; overflow: visible; }
+}
+@media (max-width: 720px) {
+  .wrap { padding: 0 16px; }
+  .masthead { padding-block: 24px 14px; }
+  h1 { font-size: 26px; }
+  .title-row { flex-wrap: nowrap; column-gap: 10px; }
+  .sync .sync-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .controls { flex-wrap: wrap; }
+  .search kbd { display: none; }
+  .surprise { padding-inline: 13px; }
+  .surprise span { display: none; }
+  .selects { order: 3; flex-basis: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .selects select { min-width: 0; font-size: 13px; padding-left: 11px; padding-right: 26px; background-position: right 9px center; }
+  .filter-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .meta { justify-content: space-between; }
+  .gallery, .col { gap: 12px; }
+  .gallery { padding-top: 18px; }
+  .card { border-radius: 12px; }
+  .card-foot { padding: 8px 10px; gap: 8px; font-size: 12px; }
+  .likes { display: none; }
+  .to-top { right: 16px; bottom: 16px; }
+  dialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); }
+  .detail-body { max-height: calc(100dvh - 18px); }
+  dialog h2 { font-size: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
 </style>
 </head>
 <body>
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
-<symbol id="i-frame" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5"/><circle cx="12" cy="12" r="4"/></symbol>
-<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
-<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-<symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></symbol>
-<symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
-<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/></symbol>
-<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
-<symbol id="i-landscape" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 16 5-5 4 4 3-3 6 6"/></symbol>
-<symbol id="i-sort" viewBox="0 0 24 24"><path d="M4 6h16M4 12h11M4 18h6"/></symbol>
-<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-<symbol id="i-external" viewBox="0 0 24 24"><path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4 4"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 20 20"><path d="M5 3.5h10v14l-5-3.5-5 3.5z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 20 20"><path d="M10 16.5s-6.5-3.8-6.5-8.3A3.5 3.5 0 0 1 10 6.3a3.5 3.5 0 0 1 6.5 1.9c0 4.5-6.5 8.3-6.5 8.3Z"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 20 20"><path d="M3 5h3l8 10h3m-3-3 3 3-3 3M3 15h3l3-4m2-2 3-4h3m-3-3 3 3-3 3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 20 20"><path d="m5 5 10 10M5 15 15 5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 20 20"><path d="M10 16V4m-5 5 5-5 5 5"/></symbol>
 </defs></svg>
-<header><div class="wrap nav"><a class="brand" href="./" aria-label="Viewfinder home"><svg class="icon"><use href="#i-frame"/></svg>viewfinder<span style="color:var(--accent)">.</span></a><div class="nav-right"><nav class="tabs" aria-label="Gallery"><button id="explore-tab" class="tab active" aria-pressed="true">Explore</button><button id="saved-tab" class="tab" aria-pressed="false"><svg class="icon" style="width:14px;height:14px"><use href="#i-bookmark"/></svg>Saved <span class="count" id="saved-count">0</span></button></nav><a class="source" href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Photography by the community<strong>pixabay <span>↗</span></strong></a></div></div></header>
+
+<header class="wrap masthead">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4H4v7m17-7h7v7M4 21v7h7m10 0h7v-7" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+  <div>
+    <div class="title-row">
+      <h1>Viewfinder</h1>
+      <p class="sync" id="sync" data-state="idle" role="status"></p>
+    </div>
+    <p id="overview"><strong>—</strong> free images</p>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="wrap">
+    <div class="controls">
+      <form class="search" id="search-form" role="search">
+        <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+        <label class="sr-only" for="search">Search Pixabay images</label>
+        <input type="search" id="search" maxlength="100" placeholder="Search photos, places, ideas…" autocomplete="off">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+      <div class="selects">
+        <label class="sr-only" for="type">Image type</label>
+        <select id="type">
+          <option value="photo">Photos</option>
+          <option value="illustration">Illustrations</option>
+          <option value="vector">Vectors</option>
+          <option value="all">All types</option>
+        </select>
+        <label class="sr-only" for="orientation">Orientation</label>
+        <select id="orientation">
+          <option value="all">Any shape</option>
+          <option value="horizontal">Landscape</option>
+          <option value="vertical">Portrait</option>
+        </select>
+        <label class="sr-only" for="order">Sort</label>
+        <select id="order">
+          <option value="popular">Popular</option>
+          <option value="latest">Newest</option>
+        </select>
+      </div>
+      <button class="button surprise" id="surprise" aria-label="Search for something random">
+        <svg class="icon" aria-hidden="true"><use href="#i-shuffle"/></svg><span>Surprise me</span>
+      </button>
+    </div>
+    <div class="filter-row">
+      <div class="chips" id="chips" role="group" aria-label="Topics">
+        <button class="chip" data-query="" aria-pressed="false">Trending</button>
+        <button class="chip" data-query="nature" aria-pressed="false">Nature</button>
+        <button class="chip" data-query="architecture" aria-pressed="false">Architecture</button>
+        <button class="chip" data-query="ocean" aria-pressed="false">Ocean</button>
+        <button class="chip" data-query="animals" aria-pressed="false">Animals</button>
+        <button class="chip" data-query="travel" aria-pressed="false">Travel</button>
+        <button class="chip" data-query="minimal" aria-pressed="false">Minimal</button>
+        <span class="chip-divider" aria-hidden="true"></span>
+        <button class="chip saved-chip" data-view="saved" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg>Saved<span class="n" id="saved-count">0</span></button>
+      </div>
+      <div class="meta">
+        <span id="count" role="status" aria-live="polite"></span>
+        <button class="link-button" data-action="clear" hidden>Clear filters</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <main class="wrap">
-<section class="hero" aria-labelledby="hero-title"><div><p class="eyebrow intro-label">A world worth looking at</p><h1 id="hero-title">Find your next<br><em>little spark.</em></h1></div><p class="hero-note"><svg class="icon"><use href="#i-spark"/></svg>A fresh perspective. An unexpected detail.<br>Good things start with a little inspiration.</p></section>
-<form class="search-form" id="search-form" role="search"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><label class="sr" for="search">Search Pixabay images</label><input id="search" type="search" maxlength="100" placeholder="Search photos, places, ideas…" autocomplete="off"><kbd aria-hidden="true">/</kbd><button class="search-button" type="submit"><span>Find inspiration</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></form>
-<div class="suggestions" aria-label="Suggested searches"><span>Wander a little</span><button class="chip" data-query="nature">Nature</button><button class="chip" data-query="architecture">Architecture</button><button class="chip" data-query="ocean">Ocean</button><button class="chip" data-query="animals">Animals</button><button class="chip" data-query="travel">Travel</button><button class="chip" data-query="minimal">Minimal</button></div>
-<section aria-labelledby="gallery-title"><div class="gallery-head"><div class="section-title"><h2 id="gallery-title">A breath of fresh air</h2><span class="result-count" id="result-count" role="status"></span></div><div class="filters" id="filters"><label class="filter"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span class="sr">Image type</span><select id="type"><option value="photo">Photography</option><option value="illustration">Illustrations</option><option value="vector">Vector art</option><option value="all">All images</option></select></label><span class="divider"></span><label class="filter"><svg class="icon" aria-hidden="true"><use href="#i-landscape"/></svg><span class="sr">Orientation</span><select id="orientation"><option value="all">Any orientation</option><option value="horizontal">Landscape</option><option value="vertical">Portrait</option></select></label><span class="divider"></span><label class="filter"><svg class="icon" aria-hidden="true"><use href="#i-sort"/></svg><span class="sr">Sort images</span><select id="order"><option value="popular">Popular first</option><option value="latest">Newest first</option></select></label></div></div>
-<p id="notice" class="notice" role="status" hidden></p><div id="gallery" class="gallery" aria-busy="true"></div><div id="empty" class="empty" hidden><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><h3 id="empty-title"></h3><p id="empty-copy"></p><button id="empty-action" class="button">Try again</button></div><div class="more-row" id="more-row" hidden><button id="load-more" class="button">A little more inspiration <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><p id="progress"></p></div></section>
+  <div id="gallery" class="gallery" aria-busy="true"></div>
+  <div id="empty" class="empty" hidden>
+    <h2 id="empty-title"></h2>
+    <p id="empty-copy"></p>
+    <button class="button" id="empty-action"></button>
+  </div>
+  <div class="more" id="more" aria-live="polite"></div>
+  <noscript><p>This gallery needs JavaScript. You can still <a href="https://pixabay.com/">explore images on Pixabay</a>.</p></noscript>
 </main>
-<footer><div class="wrap footer-inner"><span class="footer-mark"><svg class="icon" aria-hidden="true"><use href="#i-frame"/></svg>Stay curious. Keep looking.</span><span>Images from <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a>. A little credit goes a long way.</span><div class="footer-links"><a href="https://pixabay.com/service/license-summary/" target="_blank" rel="noopener noreferrer">Content license ↗</a><button id="settings-button" style="padding:0;background:none;color:inherit;font-size:inherit">API settings</button></div></div></footer>
-<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><a id="detail-user" class="dialog-user" target="_blank" rel="noopener noreferrer"><span class="avatar" id="avatar"></span><span id="username"></span></a><button class="close" aria-label="Close image preview" data-close="detail"><svg class="icon"><use href="#i-close"/></svg></button></div><img id="detail-image" class="detail-image" alt=""><div class="detail-bottom"><div><h3 id="detail-title"></h3><p class="detail-meta" id="detail-meta"></p><div id="detail-tags" class="detail-tags"></div></div><div class="detail-actions"><button id="detail-save" class="button detail-save"><svg class="icon"><use href="#i-bookmark"/></svg><span>Save image</span></button><a id="detail-link" class="button primary" target="_blank" rel="noopener noreferrer">View on Pixabay <svg class="icon"><use href="#i-external"/></svg></a></div></div><p class="detail-note">Visit Pixabay for downloads and image details. Check the <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="noopener noreferrer">content license</a> before use.</p></dialog>
-<dialog id="settings" aria-labelledby="settings-title" style="max-width:460px"><div class="dialog-top"><h2 id="settings-title" style="font-size:23px">Your connection</h2><button class="close" aria-label="Close API settings" data-close="settings"><svg class="icon"><use href="#i-close"/></svg></button></div><form id="settings-form" style="padding:24px"><p style="color:var(--muted);font-size:12px;margin:0 0 20px">The gallery connects directly to Pixabay. You can use your own <a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:underline">Pixabay API key</a>, saved only in this browser.</p><label for="api-key" style="display:block;margin-bottom:8px;font-size:12px">API key</label><input id="api-key" type="password" autocomplete="off" required style="width:100%;padding:12px;background:var(--surface);border:1px solid var(--line);border-radius:6px"><button type="submit" class="button primary" style="margin-top:20px">Save connection</button></form></dialog>
-<div class="toast" id="toast" role="status" hidden></div><noscript><p class="wrap" style="padding-block:40px">Enable JavaScript to search the gallery, or <a href="https://pixabay.com/">explore images on Pixabay</a>.</p></noscript>
+
+<footer>
+  <div class="wrap">
+    <span>Images from <a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a>. A little credit goes a long way.</span>
+    <nav aria-label="More">
+      <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="noopener noreferrer">Content license ↗</a>
+      <button id="settings-button">API settings</button>
+    </nav>
+  </div>
+</footer>
+
+<dialog id="detail" aria-labelledby="detail-title"><div class="detail-body" id="detail-body"></div></dialog>
+<dialog id="settings" aria-labelledby="settings-title">
+  <form class="settings-body" id="settings-form">
+    <button type="button" class="close" data-close aria-label="Close settings"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <h2 id="settings-title">Your connection</h2>
+    <p>The gallery talks to Pixabay directly. You can use your own <a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">Pixabay API key</a>; it’s saved only in this browser.</p>
+    <label for="api-key">API key</label>
+    <input id="api-key" type="password" autocomplete="off" required>
+    <button type="submit" class="button primary">Save connection</button>
+  </form>
+</dialog>
+<button class="to-top" id="to-top" aria-label="Back to top" tabindex="-1">
+  <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="track" cx="26" cy="26" r="24"/><circle class="fill" cx="26" cy="26" r="24" pathLength="100"/></svg>
+  <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+<div class="toast" id="toast" role="status" hidden></div>
+
 <script>
 'use strict';
-const DEFAULT_KEY = "16806102-e2074164e34baad7daabd6beb";
 const $ = id => document.getElementById(id);
-const DAY = 86400000, PER_PAGE = 24;
+const DEFAULT_KEY = "16806102-e2074164e34baad7daabd6beb";
+const API_URL = 'https://pixabay.com/api/';
+const LICENSE_URL = 'https://pixabay.com/service/license-summary/';
+const DAY = 86400000;
+const PER_PAGE = 30;
+const DEFAULTS = { query: '', type: 'photo', orientation: 'all', order: 'popular' };
+const FILTERS = ['type', 'orientation', 'order'];
+const SURPRISES = ['aurora', 'fog', 'lighthouse', 'desert', 'neon', 'autumn', 'waterfall', 'macro', 'street', 'mountains', 'bloom', 'snow', 'reflection', 'silhouette', 'harbor', 'cactus', 'jellyfish', 'sunrise', 'library', 'stairs', 'rain', 'coffee'];
+const SAVED_KEY = 'viewfinder-saved';
+const API_KEY_KEY = 'viewfinder-key';
+const CACHE_PREFIX = 'viewfinder-cache:';
+
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const fullNumber = new Intl.NumberFormat('en');
+const compactNumber = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
+const full = n => fullNumber.format(Number(n) || 0);
+const compact = n => compactNumber.format(Number(n) || 0);
+const plural = (n, word) => `${full(n)} ${word}${n === 1 ? '' : 's'}`;
 const icon = name => `<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
-const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
-const number = value => new Intl.NumberFormat('en', {notation:'compact', maximumFractionDigits:1}).format(value || 0);
+const tagsOf = img => String(img.tags || '').split(',').map(t => t.trim()).filter(Boolean);
+const titleOf = img => tagsOf(img).slice(0, 2).join(' & ') || 'Untitled';
+const hue = id => (Number(id) * 47) % 360;
+// Only Pixabay links and images are rendered.
+function safeURL(value) {
+  try {
+    const u = new URL(value);
+    return u.protocol === 'https:' && (u.hostname === 'pixabay.com' || u.hostname.endsWith('.pixabay.com')) ? u.href : '';
+  } catch { return ''; }
+}
+const userURL = img => safeURL(`https://pixabay.com/users/${encodeURIComponent(img.user)}-${Number(img.user_id)}/`);
 function read(key, fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function write(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); return true; } catch { return false; } }
-function safeURL(value) { try { const u = new URL(value); return u.protocol === 'https:' && (u.hostname === 'pixabay.com' || u.hostname.endsWith('.pixabay.com')) ? u.href : ''; } catch { return ''; } }
-let apiKey = read('viewfinder-key', DEFAULT_KEY);
-if (typeof apiKey !== 'string') apiKey = DEFAULT_KEY;
-let saved = read('viewfinder-saved', []);
-if (!Array.isArray(saved)) saved = [];
-saved = saved.filter(x => x && Number.isInteger(x.id) && typeof x.tags === 'string');
-const initial = new URLSearchParams(location.search);
-let state = {query:(initial.get('q') || 'nature').slice(0,100), type:initial.get('type') || 'photo', orientation:initial.get('orientation') || 'all', order:initial.get('order') || 'popular', page:1, total:0, images:[], view:'explore', loading:false};
-let controller, requestVersion = 0, selected = null, toastTimer;
-for (const key of ['type','orientation','order']) { const control = $(key); if ([...control.options].some(x => x.value === state[key])) control.value = state[key]; else state[key] = control.value; }
-$('search').value = state.query === 'nature' ? '' : state.query;
-function toast(message) { clearTimeout(toastTimer); $('toast').textContent = message; $('toast').hidden = false; toastTimer = setTimeout(() => $('toast').hidden = true, 3000); }
-function isSaved(id) { return saved.some(x => x.id === id); }
-function updateTabs() { for (const view of ['explore','saved']) { const active = view === state.view; $(view+'-tab').classList.toggle('active',active); $(view+'-tab').setAttribute('aria-pressed',active); } $('saved-count').textContent = saved.length; $('filters').hidden = state.view === 'saved'; document.querySelectorAll('[data-query]').forEach(button => button.classList.toggle('active',state.view === 'explore' && button.dataset.query === state.query.toLowerCase())); }
-function updateTitle() { $('gallery-title').textContent = state.view === 'saved' ? 'Your little collection' : state.query.toLowerCase() === 'nature' ? 'A breath of fresh air' : state.query ? state.query.charAt(0).toUpperCase()+state.query.slice(1) : 'A world of inspiration'; $('result-count').textContent = state.view === 'saved' ? `${saved.length} saved` : state.loading && !state.images.length ? 'Finding inspiration…' : `${new Intl.NumberFormat('en').format(state.total)} images`; }
-function updateURL() { const params = new URLSearchParams(); if (state.query) params.set('q', state.query); for (const k of ['type','orientation','order']) if (state[k] !== {type:'photo',orientation:'all',order:'popular'}[k]) params.set(k,state[k]); try { history.replaceState(null,'',`${location.pathname}?${params}`); } catch {} }
-function showEmpty(title, copy, action, callback) { $('empty-title').textContent=title; $('empty-copy').textContent=copy; $('empty-action').textContent=action; $('empty-action').onclick=callback; $('empty').hidden=false; }
-function render() {
- updateTabs(); updateTitle(); $('empty').hidden=true; $('more-row').hidden=true;
- const images = state.view === 'saved' ? saved : state.images;
- $('gallery').innerHTML = images.map(image => { const on=isSaved(image.id); return `<article class="card"><div class="image-wrap"><button class="photo-open" data-open="${image.id}" aria-label="Preview ${escapeHTML(image.tags)}"><img src="${escapeHTML(safeURL(image.webformatURL))}" alt="${escapeHTML(image.tags)}" width="${Number(image.webformatWidth)||640}" height="${Number(image.webformatHeight)||430}" loading="lazy" decoding="async"></button><button class="save${on?' on':''}" data-save="${image.id}" aria-label="${on?'Unsave':'Save'} image by ${escapeHTML(image.user)}" aria-pressed="${on}">${icon('bookmark')}</button></div><div class="card-foot"><a class="credit" href="${escapeHTML(safeURL(image.pageURL))}" target="_blank" rel="noopener noreferrer"><span>by</span> ${escapeHTML(image.user)}</a><span class="likes" aria-label="${Number(image.likes)||0} likes">${icon('heart')}${number(image.likes)}</span></div></article>`; }).join('');
- $('gallery').querySelectorAll('img').forEach(img => img.addEventListener('error',() => { img.style.opacity='.35'; img.alt='Preview unavailable — open image details to visit Pixabay'; },{once:true}));
- if (!images.length && !state.loading) {
-  if (state.view==='saved') showEmpty('Keep what catches your eye.','Save an image with the bookmark button. Your collection will be here when you come back.','Explore images',() => switchView('explore'));
-  else showEmpty('A new perspective?','No images matched this search. Try a different word or a broader set of filters.','Reset search',resetSearch);
- }
- if (images.length && state.view === 'explore') { $('more-row').hidden=false; $('load-more').hidden=images.length>=state.total; $('load-more').disabled=state.loading; $('progress').textContent=`${images.length} of ${new Intl.NumberFormat('en').format(state.total)} images explored`; }
- $('gallery').setAttribute('aria-busy',state.loading);
+const isImage = x => x && Number.isInteger(x.id) && typeof x.tags === 'string';
+function ago(time) {
+  const minutes = (Date.now() - time) / 60000;
+  if (minutes < 2) return 'just now';
+  if (minutes < 60) return `${Math.round(minutes)} min ago`;
+  return `${Math.round(minutes / 60)} h ago`;
 }
-function resetSearch() { state.query='nature'; $('search').value=''; for (const k of ['type','orientation','order']) { state[k]={type:'photo',orientation:'all',order:'popular'}[k]; $(k).value=state[k]; } state.view='explore'; load(); }
-function cachedRequest(params, signal) {
- const cacheKey='viewfinder-cache:'+JSON.stringify(params)+':'+apiKey.slice(-8);
- const cache=read(cacheKey,null);
- if (cache && Date.now()-cache.time < DAY && Array.isArray(cache.data?.hits)) return Promise.resolve({...cache.data,hits:cache.data.hits.map(x=>({...x,fetchedAt:cache.time}))});
- return fetch('https://pixabay.com/api/?'+new URLSearchParams({...params,key:apiKey,safesearch:'true'}),{signal}).then(async response => {
-  if (!response.ok) throw new Error(response.status===429 ? 'Pixabay is receiving too many requests. Give it a minute, then try again.' : [400,401,403].includes(response.status) ? 'Pixabay could not connect with this API key. Check your connection in API settings.' : 'Pixabay is unavailable just now. Please try again in a moment.');
-  const data=await response.json();
+
+let apiKey = read(API_KEY_KEY, DEFAULT_KEY);
+if (typeof apiKey !== 'string' || !apiKey) apiKey = DEFAULT_KEY;
+let saved = read(SAVED_KEY, []);
+saved = Array.isArray(saved) ? saved.filter(isImage) : [];
+
+const params = new URLSearchParams(location.search);
+const state = {
+  query: (params.get('q') || '').slice(0, 100),
+  type: params.get('type') || DEFAULTS.type,
+  orientation: params.get('orientation') || DEFAULTS.orientation,
+  order: params.get('order') || DEFAULTS.order,
+  view: 'explore',
+  page: 1,
+  total: 0,
+  images: [],
+  loading: false,
+  done: false,
+  error: '',
+};
+for (const key of FILTERS) {
+  if ([...$(key).options].some(o => o.value === state[key])) $(key).value = state[key];
+  else state[key] = $(key).value;
+}
+$('search').value = state.query;
+
+let controller;
+let requestVersion = 0;
+let selected = null;
+let returnFocus = null;
+let toastTimer;
+let searchTimer;
+
+function notify(message) {
+  $('toast').textContent = message;
+  $('toast').hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { $('toast').hidden = true; }, 3500);
+}
+function setSync(status, text) {
+  const sync = $('sync');
+  sync.dataset.state = status;
+  sync.innerHTML = `<span class="sync-text">${esc(text)}</span>`;
+  sync.title = `Source: Pixabay API · ${text}`;
+}
+const isSaved = id => saved.some(x => x.id === id);
+const currentList = () => state.view === 'saved' ? saved : state.images;
+const findImage = id => state.images.find(x => x.id === id) || saved.find(x => x.id === id) || (selected?.id === id ? selected : null);
+const isFiltered = () => FILTERS.some(k => state[k] !== DEFAULTS[k]) || state.query !== DEFAULTS.query;
+
+// Requests are cached for a day, which is as long as Pixabay allows its image URLs to be kept.
+async function request(query, signal) {
+  const cacheKey = CACHE_PREFIX + JSON.stringify(query) + ':' + apiKey.slice(-8);
+  const cache = read(cacheKey, null);
+  if (cache && Date.now() - cache.time < DAY && Array.isArray(cache.data?.hits)) return { data: cache.data, cachedAt: cache.time };
+  const response = await fetch(API_URL + '?' + new URLSearchParams({ ...query, key: apiKey, safesearch: 'true' }), { signal });
+  if (!response.ok) {
+    throw new Error(response.status === 429 ? 'Pixabay is receiving too many requests. Give it a minute, then try again.'
+      : [400, 401, 403].includes(response.status) ? 'Pixabay didn’t accept this API key. Check your connection in API settings.'
+      : 'Pixabay is unavailable just now. Please try again in a moment.');
+  }
+  const data = await response.json();
   if (!Array.isArray(data.hits)) throw new Error('Pixabay returned an unexpected response. Please try again.');
-  const entry={time:Date.now(),data};
-  try { for (const key of Object.keys(localStorage)) { if(key.startsWith('viewfinder-cache:')) { const old=read(key,null); if(!old || Date.now()-old.time>=DAY) localStorage.removeItem(key); } } } catch {}
-  write(cacheKey,entry); return data;
- });
+  try {
+    for (const key of Object.keys(localStorage)) {
+      if (!key.startsWith(CACHE_PREFIX)) continue;
+      const old = read(key, null);
+      if (!old || Date.now() - old.time >= DAY) localStorage.removeItem(key);
+    }
+  } catch {}
+  write(cacheKey, { time: Date.now(), data });
+  return { data, cachedAt: null };
 }
-async function load(append=false) {
- if (controller) controller.abort(); controller=new AbortController();
- const version=++requestVersion;
- const timeout=setTimeout(() => controller?.abort(),20000);
- state.loading=true; state.view='explore'; $('notice').hidden=true;
- if (!append) { state.page=1; state.images=[]; state.total=0; }
- updateURL(); render();
- if (!append) $('gallery').innerHTML=Array.from({length:12},()=>'<div class="skeleton" aria-hidden="true"></div>').join('');
- try {
-  const data=await cachedRequest({q:state.query,image_type:state.type,orientation:state.orientation,order:state.order,page:state.page,per_page:PER_PAGE},controller.signal);
-  if (version!==requestVersion) return;
-  const existing=new Set(state.images.map(x=>x.id));
-  state.images.push(...data.hits.filter(x=>!existing.has(x.id)).map(x=>({...x,fetchedAt:x.fetchedAt||Date.now()})));
-  state.total=Number(data.totalHits)||0; state.loading=false; render();
- } catch(error) {
-  if(version!==requestVersion) return;
-  if(append) state.page=Math.max(1,state.page-1);
-  state.loading=false; render();
-  const message=error.name==='AbortError' ? 'The connection took a little too long. Check your internet and try again.' : error.message || 'Could not reach Pixabay. Please check your internet connection.';
-  if(state.images.length) { $('notice').textContent=message; $('notice').hidden=false; }
-  else showEmpty('A pause in the view.',message,'Try again',()=>load());
- } finally { clearTimeout(timeout); }
+
+/* Masonry */
+let columns = [];
+let heights = [];
+const columnCount = () => innerWidth >= 1200 ? 4 : innerWidth >= 820 ? 3 : 2;
+function resetColumns() {
+  const n = columnCount();
+  $('gallery').innerHTML = '<div class="col"></div>'.repeat(n);
+  columns = [...$('gallery').children];
+  heights = Array(n).fill(0);
 }
-function toggleSave(image) {
- const previous=saved;
- saved=isSaved(image.id)?saved.filter(x=>x.id!==image.id):[{...image,fetchedAt:image.fetchedAt||Date.now()},...saved];
- if (!write('viewfinder-saved',saved)) { saved=previous; toast('Your browser could not save this image. Check available storage.'); return; }
- toast(isSaved(image.id)?'A little inspiration, saved.':'Image removed from your collection.');
- if (state.view==='saved') render(); else { updateTabs(); document.querySelectorAll(`[data-save="${image.id}"]`).forEach(button => { const on=isSaved(image.id); button.classList.toggle('on',on); button.setAttribute('aria-pressed',on); button.setAttribute('aria-label',`${on?'Unsave':'Save'} image by ${image.user}`); }); }
- updateDetailSave();
+// Heights are tracked as aspect ratios plus a footer allowance, so placement doesn't wait for images to load.
+function place(html, ratio) {
+  const i = heights.indexOf(Math.min(...heights));
+  columns[i].insertAdjacentHTML('beforeend', html);
+  heights[i] += ratio + .14;
 }
-function updateDetailSave() { if(!selected)return; const on=isSaved(selected.id); $('detail-save').classList.toggle('on',on); $('detail-save').setAttribute('aria-pressed',on); $('detail-save').querySelector('span').textContent=on?'Saved':'Save image'; }
-function openDetail(image) {
- selected=image; $('username').textContent=image.user; $('avatar').textContent=(image.user||'?').slice(0,1).toUpperCase(); $('detail-user').href=safeURL(`https://pixabay.com/users/${encodeURIComponent(image.user)}-${Number(image.user_id)}/`);
- $('detail-image').src=safeURL(image.largeImageURL||image.webformatURL); $('detail-image').alt=image.tags;
- $('detail-title').textContent=image.tags.split(',').slice(0,2).join(' / ');
- $('detail-meta').textContent=`${image.imageWidth} × ${image.imageHeight} px  ·  ${number(image.views)} views  ·  ${number(image.downloads)} downloads  ·  ${number(image.likes)} likes`;
- $('detail-tags').innerHTML=image.tags.split(',').slice(0,6).map(tag=>`<button class="chip" data-query="${escapeHTML(tag.trim())}">${escapeHTML(tag.trim())}</button>`).join('');
- $('detail-link').href=safeURL(image.pageURL); updateDetailSave(); $('detail').showModal();
+function saveButton(img, withText) {
+  const on = isSaved(img.id);
+  return `<button class="save${on ? ' on' : ''}" data-save="${img.id}" aria-pressed="${on}" aria-label="Save image by ${esc(img.user)}" title="${on ? 'Saved' : 'Save'}">${icon('bookmark')}${withText ? `<span>${on ? 'Saved' : 'Save'}</span>` : ''}</button>`;
 }
-async function switchView(view) {
- if(state.view===view)return;
- if(view==='explore') { state.view='explore'; load(); return; }
- controller?.abort(); ++requestVersion; state.loading=false; state.view='saved'; $('notice').hidden=true; render();
- const expired=saved.filter(x=>!x.fetchedAt || Date.now()-x.fetchedAt>=DAY);
- if(!expired.length)return;
- $('notice').textContent='Refreshing your saved previews…'; $('notice').hidden=false;
- let failed=false;
- for(const image of expired) {
-  if(state.view!=='saved')break;
-  try { const data=await cachedRequest({id:image.id},AbortSignal.timeout(15000)); const fresh=data.hits[0]; if(fresh) saved=saved.map(x=>x.id===image.id?{...fresh,fetchedAt:Date.now()}:x); else saved=saved.map(x=>x.id===image.id?{...x,webformatURL:'',largeImageURL:'',fetchedAt:Date.now()}:x); } catch { failed=true; }
- }
- write('viewfinder-saved',saved);
- if(state.view==='saved') { render(); $('notice').hidden=!failed; $('notice').textContent='Some previews could not be refreshed. You can still visit their pages on Pixabay.'; }
+function credit(img) {
+  return `<a class="credit" href="${esc(userURL(img))}" target="_blank" rel="noopener noreferrer"><span class="avatar" style="--hue:${hue(img.user_id)}" aria-hidden="true">${esc(String(img.user || '?').charAt(0).toUpperCase())}</span><span class="name">${esc(img.user)}</span></a>`;
 }
-$('search-form').addEventListener('submit',event=>{event.preventDefault();state.query=$('search').value.trim();load();});
-document.addEventListener('click',event=>{
- const chip=event.target.closest('[data-query]'); if(chip) { state.query=chip.dataset.query; $('search').value=state.query; if($('detail').open)$('detail').close();load();return; }
- const button=event.target.closest('[data-open],[data-save]'); if(button) { const id=Number(button.dataset.open||button.dataset.save),image=[...state.images,...saved].find(x=>x.id===id); if(image) button.hasAttribute('data-open')?openDetail(image):toggleSave(image); }
- const close=event.target.closest('[data-close]'); if(close)$(close.dataset.close).close();
+function addCard(img) {
+  const w = Number(img.webformatWidth) || 640;
+  const h = Number(img.webformatHeight) || 430;
+  const src = safeURL(img.webformatURL);
+  place(`<article class="card">
+<button class="photo${src ? '' : ' missing'}" data-open="${img.id}" style="aspect-ratio:${w}/${h}" aria-label="Open ${esc(titleOf(img))}">
+<img src="${esc(src)}" alt="${esc(img.tags)}" width="${w}" height="${h}" loading="lazy" decoding="async">
+<span class="caption" aria-hidden="true">${esc(tagsOf(img).slice(0, 3).join(' · '))}</span>
+</button>
+<div class="card-foot">${credit(img)}<span class="likes" title="${full(img.likes)} likes">${icon('heart')}${compact(img.likes)}</span>${saveButton(img)}</div>
+</article>`, h / w);
+}
+function renderAll() {
+  resetColumns();
+  const list = currentList();
+  if (state.view === 'explore' && state.loading && !list.length) {
+    for (let i = 0; i < 12; i++) {
+      const ratio = [.66, 1.25, .8, 1.5][i % 4];
+      place(`<div class="skeleton" style="aspect-ratio:1/${ratio}" aria-hidden="true"></div>`, ratio);
+    }
+  } else {
+    list.forEach(addCard);
+  }
+  updateChrome();
+  queueProgress();
+}
+
+function showEmpty(title, copy, label, action) {
+  $('empty-title').textContent = title;
+  $('empty-copy').textContent = copy;
+  $('empty-action').textContent = label;
+  $('empty-action').dataset.action = action;
+  $('empty').hidden = false;
+}
+function updateChrome() {
+  const explore = state.view === 'explore';
+  const list = currentList();
+  document.querySelectorAll('[data-query]').forEach(chip => {
+    if (!chip.closest('#chips')) return;
+    const on = explore && chip.dataset.query === state.query.toLowerCase();
+    chip.classList.toggle('active', on);
+    chip.setAttribute('aria-pressed', on);
+  });
+  const savedChip = document.querySelector('[data-view="saved"]');
+  savedChip.classList.toggle('active', !explore);
+  savedChip.setAttribute('aria-pressed', !explore);
+  $('saved-count').textContent = saved.length;
+  FILTERS.forEach(k => { $(k).disabled = !explore; });
+  document.querySelector('.meta [data-action="clear"]').hidden = !explore || !isFiltered();
+
+  const what = state.query ? `for “${esc(state.query)}”` : 'trending on Pixabay';
+  $('overview').innerHTML = explore
+    ? `<strong>${state.loading && !list.length ? '—' : full(state.total)}</strong> free images ${what} · <strong>${saved.length}</strong> saved`
+    : `<strong>${saved.length}</strong> saved · kept in this browser`;
+  $('count').textContent = explore ? (list.length ? `${full(list.length)} of ${full(state.total)}` : '') : plural(saved.length, 'image');
+  $('gallery').setAttribute('aria-busy', state.loading);
+
+  $('empty').hidden = true;
+  if (!list.length && !state.loading) {
+    if (!explore) showEmpty('Nothing saved yet.', 'Tap the bookmark on any image and it’ll be waiting here when you come back.', 'Explore images', 'explore');
+    else if (state.error) showEmpty('A pause in the view.', state.error, 'Try again', 'retry');
+    else showEmpty('Nothing in frame.', 'No images matched. Try a different word or loosen the filters.', 'Clear filters', 'clear');
+  }
+
+  const more = $('more');
+  more.className = 'more';
+  more.innerHTML = '';
+  if (!explore || !list.length) return;
+  if (state.loading) {
+    more.classList.add('loading');
+    more.textContent = 'Loading more…';
+  } else if (state.error) {
+    more.innerHTML = `${esc(state.error)}<button class="link-button" data-action="more">Try again</button>`;
+  } else if (state.done) {
+    more.textContent = `That’s all ${plural(list.length, 'image')} Pixabay shares for this search.`;
+  }
+}
+function updateURL() {
+  const next = new URLSearchParams();
+  if (state.query) next.set('q', state.query);
+  for (const k of FILTERS) if (state[k] !== DEFAULTS[k]) next.set(k, state[k]);
+  const qs = next.toString();
+  try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash); } catch {}
+}
+
+async function load(append = false) {
+  controller?.abort();
+  const ctrl = controller = new AbortController();
+  const version = ++requestVersion;
+  const timeout = setTimeout(() => ctrl.abort(), 20000);
+  state.view = 'explore';
+  state.loading = true;
+  state.error = '';
+  if (append) {
+    state.page++;
+    updateChrome();
+  } else {
+    Object.assign(state, { page: 1, total: 0, images: [], done: false });
+    renderAll();
+  }
+  updateURL();
+  setSync('checking', 'Fetching from Pixabay…');
+  try {
+    const { data, cachedAt } = await request({
+      q: state.query,
+      image_type: state.type,
+      orientation: state.orientation,
+      order: state.order,
+      page: state.page,
+      per_page: PER_PAGE,
+    }, ctrl.signal);
+    if (version !== requestVersion) return;
+    const known = new Set(state.images.map(x => x.id));
+    const fresh = data.hits.filter(x => isImage(x) && !known.has(x.id)).map(x => ({ ...x, fetchedAt: cachedAt || Date.now() }));
+    state.images.push(...fresh);
+    state.total = Number(data.totalHits) || 0;
+    // Free API keys stop at totalHits (at most 500); asking past that is an error.
+    state.done = data.hits.length < PER_PAGE || state.page * PER_PAGE >= state.total;
+    state.loading = false;
+    if (append) fresh.forEach(addCard);
+    else renderAll();
+    updateChrome();
+    setSync(cachedAt ? 'idle' : 'live', cachedAt ? `Cached · ${ago(cachedAt)}` : 'Live from Pixabay');
+  } catch (error) {
+    if (version !== requestVersion) return;
+    if (append) state.page--;
+    state.loading = false;
+    state.error = error.name === 'AbortError' ? 'The connection took too long. Check your internet and try again.'
+      : error instanceof TypeError ? 'Couldn’t reach Pixabay. Check your internet connection.'
+      : error.message;
+    if (append) updateChrome();
+    else renderAll();
+    setSync('error', 'Couldn’t reach Pixabay');
+  } finally {
+    clearTimeout(timeout);
+    if (version === requestVersion) rearm();
+  }
+}
+
+async function showSaved() {
+  controller?.abort();
+  ++requestVersion;
+  Object.assign(state, { view: 'saved', loading: false, error: '' });
+  renderAll();
+  scrollTo({ top: 0 });
+  // Pixabay image URLs expire, so saved previews older than a day are fetched again.
+  const expired = saved.filter(x => !x.fetchedAt || Date.now() - x.fetchedAt >= DAY);
+  if (!expired.length) return;
+  setSync('checking', 'Refreshing saved previews…');
+  let failed = false;
+  for (const img of expired) {
+    if (state.view !== 'saved') return;
+    try {
+      const { data } = await request({ id: img.id }, AbortSignal.timeout(15000));
+      const fresh = data.hits[0];
+      saved = saved.map(x => x.id !== img.id ? x : fresh ? { ...fresh, fetchedAt: Date.now() } : { ...x, webformatURL: '', largeImageURL: '', fetchedAt: Date.now() });
+    } catch { failed = true; }
+  }
+  write(SAVED_KEY, saved);
+  if (state.view !== 'saved') return;
+  renderAll();
+  setSync(failed ? 'error' : 'live', failed ? 'Some previews couldn’t refresh' : 'Live from Pixabay');
+}
+
+function toggleSave(img) {
+  const previous = saved;
+  const on = !isSaved(img.id);
+  saved = on ? [{ ...img, fetchedAt: img.fetchedAt || Date.now() }, ...saved] : saved.filter(x => x.id !== img.id);
+  if (!write(SAVED_KEY, saved)) {
+    saved = previous;
+    notify('Your browser couldn’t save this. Check that storage is available.');
+    return;
+  }
+  notify(on ? 'Saved to your collection.' : 'Removed from your collection.');
+  syncSaveButtons(img.id);
+  if (state.view === 'saved') renderAll();
+  else updateChrome();
+}
+function syncSaveButtons(id) {
+  const on = isSaved(id);
+  document.querySelectorAll(`[data-save="${id}"]`).forEach(b => {
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', on);
+    b.title = on ? 'Saved' : 'Save';
+    const label = b.querySelector('span');
+    if (label) label.textContent = on ? 'Saved' : 'Save';
+  });
+}
+
+function openDetail(img, updateHash = true) {
+  selected = img;
+  const tags = tagsOf(img);
+  const w = Number(img.imageWidth) || 0;
+  const h = Number(img.imageHeight) || 0;
+  $('detail-body').innerHTML = `
+<button class="close" data-close aria-label="Close preview">${icon('close')}</button>
+<div class="detail-media"><img src="${esc(safeURL(img.largeImageURL || img.webformatURL))}" alt="${esc(img.tags)}" width="${Number(img.webformatWidth) || ''}" height="${Number(img.webformatHeight) || ''}"></div>
+<div class="detail-info">
+  <span class="tag">${esc(img.type || 'image')}</span>
+  <h2 id="detail-title">${esc(titleOf(img))}</h2>
+  ${credit(img)}
+  <dl class="facts">
+    <div><dt>Resolution</dt><dd>${w && h ? `${full(w)} × ${full(h)}` : '—'}</dd></div>
+    <div><dt>Views</dt><dd>${full(img.views)}</dd></div>
+    <div><dt>Downloads</dt><dd>${full(img.downloads)}</dd></div>
+    <div><dt>Likes</dt><dd>${full(img.likes)}</dd></div>
+  </dl>
+  <div class="detail-tags">${tags.slice(0, 8).map(t => `<button class="chip" data-query="${esc(t)}">${esc(t)}</button>`).join('')}</div>
+  <div class="actions">
+    <a class="button primary" href="${esc(safeURL(img.pageURL))}" target="_blank" rel="noopener noreferrer">View on Pixabay ↗</a>
+    ${saveButton(img, true)}
+    <button class="button" data-copy>Copy link</button>
+  </div>
+  <p class="note">Download from Pixabay, and check the <a href="${LICENSE_URL}" target="_blank" rel="noopener noreferrer">content license</a> before use.</p>
+</div>`;
+  $('detail-body').querySelector('.detail-media img').addEventListener('error', e => {
+    e.target.closest('.detail-media').innerHTML = '<p class="note">Preview unavailable. Use View on Pixabay to see this image.</p>';
+  }, { once: true });
+  const dialog = $('detail');
+  if (!dialog.open) {
+    returnFocus = document.activeElement;
+    dialog.showModal();
+  }
+  $('detail-body').scrollTop = 0;
+  if (updateHash) history.replaceState(null, '', location.pathname + location.search + '#image=' + img.id);
+}
+function step(delta) {
+  const list = currentList();
+  const i = list.findIndex(x => x.id === selected?.id);
+  if (i >= 0 && list[i + delta]) openDetail(list[i + delta]);
+}
+async function readHash() {
+  const match = location.hash.match(/^#image=(\d+)$/);
+  if (!match) return;
+  const id = Number(match[1]);
+  let img = findImage(id);
+  if (!img) {
+    try {
+      const { data } = await request({ id }, AbortSignal.timeout(15000));
+      if (isImage(data.hits[0])) img = { ...data.hits[0], fetchedAt: Date.now() };
+    } catch {}
+  }
+  if (img) openDetail(img, false);
+  else notify('That image couldn’t be found on Pixabay.');
+}
+
+function search(query) {
+  clearTimeout(searchTimer);
+  state.query = query.trim().slice(0, 100);
+  $('search').value = state.query;
+  load();
+}
+function clearFilters() {
+  for (const k of FILTERS) {
+    state[k] = DEFAULTS[k];
+    $(k).value = DEFAULTS[k];
+  }
+  search('');
+}
+
+// Infinite scroll: fetch the next page whenever the bottom of the gallery nears the viewport.
+const pager = new IntersectionObserver(([entry]) => {
+  if (!entry.isIntersecting || state.view !== 'explore' || state.loading || state.done || state.error || !state.images.length) return;
+  load(true);
+}, { rootMargin: '1200px 0px' });
+// Re-observing fires a fresh intersection check, so the gallery keeps filling while the bottom is on screen.
+function rearm() {
+  pager.unobserve($('more'));
+  pager.observe($('more'));
+}
+
+// Progress is measured against the whole result set, estimating the height of pages not loaded yet,
+// so the ring doesn't jump back each time another page loads.
+let progressFrame = 0;
+function updateProgress() {
+  progressFrame = 0;
+  const button = $('to-top');
+  const loaded = document.documentElement.scrollHeight;
+  const shown = currentList().length;
+  const total = state.view === 'explore' && shown && !state.done ? loaded * Math.max(1, state.total / shown) : loaded;
+  const progress = Math.min(1, Math.max(0, scrollY / Math.max(1, total - innerHeight)));
+  const visible = scrollY > innerHeight;
+  button.style.setProperty('--progress', progress.toFixed(4));
+  button.classList.toggle('show', visible);
+  button.tabIndex = visible ? 0 : -1;
+  button.title = `Back to top · ${Math.round(progress * 100)}% through`;
+}
+const queueProgress = () => { progressFrame ||= requestAnimationFrame(updateProgress); };
+addEventListener('scroll', queueProgress, { passive: true });
+addEventListener('resize', () => {
+  if (columnCount() !== columns.length) renderAll();
+  queueProgress();
 });
-for(const key of ['type','orientation','order'])$(key).addEventListener('change',()=>{state[key]=$(key).value;load();});
-$('explore-tab').onclick=()=>switchView('explore'); $('saved-tab').onclick=()=>switchView('saved');
-$('load-more').onclick=()=>{if(!state.loading){state.page++;load(true);}};
-$('detail-save').onclick=()=>{if(selected)toggleSave(selected);};
-$('detail-image').onerror=()=>{$('detail-image').alt='Preview unavailable. Use View on Pixabay to see this image.';};
-for(const dialog of document.querySelectorAll('dialog'))dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-$('settings-button').onclick=()=>{$('api-key').value=apiKey;$('settings').showModal();};
-$('settings-form').onsubmit=event=>{event.preventDefault();apiKey=$('api-key').value.trim();if(!apiKey)return;const stored=write('viewfinder-key',apiKey);$('settings').close();toast(stored?'Connection saved.':'Connection updated for this visit.');load();};
-document.addEventListener('keydown',event=>{if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!document.querySelector('dialog[open]')){event.preventDefault();$('search').focus();}});
-window.addEventListener('storage',event=>{if(event.key==='viewfinder-saved'){const next=read('viewfinder-saved',[]);if(Array.isArray(next)){saved=next.filter(x=>x&&Number.isInteger(x.id)&&typeof x.tags==='string');render();updateDetailSave();}}});
+
+$('search-form').addEventListener('submit', e => {
+  e.preventDefault();
+  search($('search').value);
+});
+$('search').addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    if ($('search').value.trim() !== state.query || state.view !== 'explore') search($('search').value);
+  }, 450);
+});
+FILTERS.forEach(k => $(k).addEventListener('change', () => {
+  state[k] = $(k).value;
+  load();
+}));
+$('surprise').addEventListener('click', () => {
+  const pool = SURPRISES.filter(w => w !== state.query);
+  search(pool[Math.floor(Math.random() * pool.length)]);
+});
+$('to-top').addEventListener('click', () => {
+  scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  $('search').focus({ preventScroll: true });
+});
+$('gallery').addEventListener('error', e => {
+  if (e.target.tagName === 'IMG') e.target.closest('.photo')?.classList.add('broken');
+}, true);
+
+document.addEventListener('click', async e => {
+  const t = e.target;
+  const action = t.closest('[data-action]')?.dataset.action;
+  if (action === 'clear') clearFilters();
+  else if (action === 'retry') load();
+  else if (action === 'more') load(true);
+  else if (action === 'explore') load();
+  else if (t.closest('[data-view="saved"]')) state.view === 'saved' ? load() : showSaved();
+  else if (t.closest('[data-query]')) {
+    if ($('detail').open) $('detail').close();
+    search(t.closest('[data-query]').dataset.query);
+  } else if (t.closest('[data-save]')) {
+    const img = findImage(Number(t.closest('[data-save]').dataset.save));
+    if (img) toggleSave(img);
+  } else if (t.closest('[data-open]')) {
+    const img = findImage(Number(t.closest('[data-open]').dataset.open));
+    if (img) openDetail(img);
+  } else if (t.closest('[data-copy]')) {
+    try { await navigator.clipboard.writeText(location.href); notify('Link copied.'); }
+    catch { notify('Copy the link from your address bar.'); }
+  } else if (t.closest('[data-close]') || t.tagName === 'DIALOG') {
+    // A click on the dialog element itself is a click on the backdrop.
+    t.closest('dialog').close();
+  }
+});
+$('detail').addEventListener('close', () => {
+  selected = null;
+  if (location.hash.startsWith('#image=')) history.replaceState(null, '', location.pathname + location.search);
+  if (returnFocus?.isConnected) returnFocus.focus();
+});
+$('settings-button').addEventListener('click', () => {
+  $('api-key').value = apiKey;
+  $('settings').showModal();
+});
+$('settings-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const value = $('api-key').value.trim();
+  if (!value) return;
+  apiKey = value;
+  const stored = write(API_KEY_KEY, apiKey);
+  $('settings').close();
+  notify(stored ? 'Connection saved.' : 'Connection updated for this visit.');
+  load();
+});
+document.addEventListener('keydown', e => {
+  if ($('detail').open && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+    step(e.key === 'ArrowRight' ? 1 : -1);
+  } else if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey && !e.target.closest('input, select, textarea') && !document.querySelector('dialog[open]')) {
+    e.preventDefault();
+    $('search').focus();
+  }
+});
+addEventListener('hashchange', readHash);
+addEventListener('storage', e => {
+  if (e.key !== SAVED_KEY) return;
+  const next = read(SAVED_KEY, []);
+  if (!Array.isArray(next)) return;
+  saved = next.filter(isImage);
+  if (state.view === 'saved') renderAll();
+  else {
+    updateChrome();
+    document.querySelectorAll('[data-save]').forEach(b => syncSaveButtons(Number(b.dataset.save)));
+  }
+});
+
 load();
+readHash();
 </script>
 </body>
 </html>
